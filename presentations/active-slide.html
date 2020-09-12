@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <!-- Meta Tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Active Slide || LMPPT Presentation</title>
+    <meta name="author" content="Akshat Gupta, Fenil Jain, Muskan Rastogi and Raman" />
+    <meta name="description"
+        content="Project which automatically generates crucial business and leisure presentation slides based on what you say in real time." />
+    <meta name="keywords" content="presentation, ppt, template, last minute, hurry, voice" />
+
+    <!-- Favicon, Apple Touch Icon, CSS -->
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        defer>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../dist/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../assets/css/spacing.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <ul id="menu">
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+    </ul>
+
+    <!-- Full Page -->
+    <div id="fullpage">
+        <!-- Section -->
+        <div class="section" id="section0">
+            <h1>Section 1</h1>
+        </div>
+        <!-- Section -->
+        <div class="section active" id="section1">
+            <div class="slide" id="slide1">
+                <div class="intro">
+                    <h1>Slide 2.1</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Section -->
+        <div class="section" id="section2">
+            <div class="intro">
+                <h1>Section 3</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../dist/fullpage.js"></script>
+    <!-- Full Page Script -->
+    <script type="text/javascript">
+        var myFullpage = new fullpage('#fullpage', {
+            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+            menu: '#menu',
+            lazyLoad: true
+        });
+    </script>
+
+</body>
+
+</html>
