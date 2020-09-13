@@ -70,7 +70,9 @@ function stopRecordAudio() {
                 if (this.status == 200) {
                     var response = JSON.parse(this.responseText);
                     console.log(response.type);
-                    document.getElementById("para1").innerHTML = "<p class='white-text'>" + response.bullet + "</p>";
+                    var midBullet = str.split("|");
+                    document.getElementById("demo").innerHTML = res;
+                    document.getElementById("para1").innerHTML = "<p class='white-text' style='text-transform: capitalize;'>" + finalBullet + "</p>";
                     if (response.type == "image") {
                         imageOf = response.image;
                         var xhr2 = new XMLHttpRequest();
@@ -86,8 +88,12 @@ function stopRecordAudio() {
                             if (this.status == 200) {
                                 var response = JSON.parse(this.responseText);
                                 console.log(response.photos[0].url);
-                                var imageURL = response.photos[0].url;
-                                $("#image1").append(`<img src="https://www.pexels.com/photo/two-yellow-labrador-retriever-puppies-1108099/" alt="" class="responsive-img"/>`);
+                                var imgURL = response.photos[0].url;
+                                let split1 = imgURL.split("/");
+                                const split2 = split1[split1.length - 2].split('-');
+                                const number = split2[split2.length - 1];
+                                const imageURL = `https://images.pexels.com/photos/${number}/pexels-photo-${number}.jpeg`;
+                                $("#image1").append(`<img src="${imageURL}" alt="" class="responsive-img" style='width: 200px;'/>`);
                             }
                         };
                     }
@@ -123,9 +129,7 @@ function stopRecordAudio() {
                 if (this.status == 200) {
                     var response = JSON.parse(this.responseText);
                     console.log(response.type);
-                    if (response.type == "bullet") {
-                        document.getElementById("para2").innerHTML = "<p class='white-text'>" + response.bullet + "</p>";
-                    }
+                    document.getElementById("para2").innerHTML = "<p class='white-text' style='text-transform: capitalize;'>" + response.bullet + "</p>";
                     if (response.type == "image") {
                         imageOf = response.image;
                         var xhr2 = new XMLHttpRequest();
@@ -140,9 +144,13 @@ function stopRecordAudio() {
                         xhr2.onload = function () {
                             if (this.status == 200) {
                                 var response = JSON.parse(this.responseText);
-                                console.log(response);
-                                var imageURL = response.photos[0].url;
-                                $("#image2").append(`<img src="${imageURL}" alt="" class="responsive-img"/>`);
+                                console.log(response.photos[0].url);
+                                var imgURL = response.photos[0].url;
+                                let split1 = imgURL.split("/");
+                                const split2 = split1[split1.length - 2].split('-');
+                                const number = split2[split2.length - 1];
+                                const imageURL = `https://images.pexels.com/photos/${number}/pexels-photo-${number}.jpeg`;
+                                $("#image2").append(`<img src="${imageURL}" alt="" class="responsive-img" style='width: 200px;'/>`);
                             }
                         };
                     }
@@ -171,3 +179,4 @@ function stopRecordAudio() {
 function downloadPresentation() {
     print();
 }
+
