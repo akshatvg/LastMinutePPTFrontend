@@ -93,11 +93,6 @@
 			<button id="stopRecordAudio" onclick="stopRecordAudio();" class="btn waves-effect toolBtn z-depth-0 my-2"><i
 					class="material-icons">mic_off</i></button>
 		</div>
-		<!-- Next Record Ready -->
-		<div id="nextRecordReadyDiv">
-			<button id="nextRecordReady" onclick="nextRecordReady();" class="btn waves-effect toolBtn z-depth-0 my-2"><i
-					class="material-icons">next_week</i></button>
-		</div>
 		<!-- Download PDF Presentation -->
 		<div id="downloadPresentationDiv">
 			<button id="downloadPresentation" onclick="downloadPresentation();"
@@ -111,31 +106,57 @@
 		<div class="section" id="section0">
 			<!-- Slide -->
 			<div class="slide">
-				<h1>One single section</h1>
+				<div class="row">
+					<div class="col s12 m4">
+						<h1 id="title"></h1>
+					</div>
+				</div>
 			</div>
 			<!-- Slide -->
 			<div class="slide">
-				<h1>And a normal website under it</h1>
-			</div>
-			<!-- Slide -->
-			<div class="slide">
-				<h1>A great single slider!</h1>
+				<div class="row">
+					<div class="col s12 m4">
+						<p id="para1"></p>
+					</div>
+					<div class="col s12 m4" id="image1">
+					</div>
+					<div class="col s12 m4" id="graph1">
+					</div>
+				</div>
+				<!-- Slide -->
+				<div class="slide">
+					<div class="row">
+						<div class="col s12 m4">
+							<p id="para2"></p>
+						</div>
+						<div class="col s12 m4" id="image2">
+						</div>
+						<div class="col s12 m4" id="graph2">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<!-- Scripts -->
-	<script type="text/javascript" src="../dist/fullpage.js"></script>
-	<!-- Full Page Script -->
-	<script type="text/javascript">
-		var myFullpage = new fullpage('#fullpage', {
-			anchors: ['firstPage'],
-			sectionsColor: ['#4A6FB1'],
-			autoScrolling: false,
-			css3: true,
-			fitToSection: false
-		});
-	</script>
+		<!-- Scripts -->
+		<script type="text/javascript" src="../dist/fullpage.js"></script>
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="record.js"></script>
+		<!-- Full Page Script -->
+		<script type="text/javascript">
+			var myFullpage = new fullpage('#fullpage', {
+				anchors: ['firstPage'],
+				sectionsColor: ['#4A6FB1'],
+				autoScrolling: false,
+				css3: true,
+				fitToSection: false
+			});
+		</script>
 
 </body>
 

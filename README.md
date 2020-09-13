@@ -17,8 +17,7 @@ Project which automatically generates crucial business and leisure presentation 
 
 ## Useful Links
 
-- [Backend Repo](https://github.com/muskanrastogi1/LastMinutePPT)
-- [Machine Learning & NLP Repo](#!)
+- [Backend Repo](https://github.com/ramaneswaran/LastMinutePPTbackend)
 
 ## Requirements
 
