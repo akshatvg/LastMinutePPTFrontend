@@ -69,7 +69,7 @@ ______      _               _   _               _
 
 ## License
 
-**MIT &copy; [Akshat Gupta, Fenil Jain, Muskan Rastogi & Raman](https://github.com/akshatvg/LastMinutePPTFrontend/blob/master/LICENSE)**
+**MIT &copy; [Akshat Gupta, Fenil Jain, Muskan Rastogi and Ramaneswaran](https://github.com/akshatvg/LastMinutePPTFrontend/blob/master/LICENSE)**
 
 [![GitHub license](https://img.shields.io/github/license/akshatvg/LastMinutePPTFrontend?style=social&logo=github)](https://github.com/akshatvg/LastMinutePPTFrontend/blob/master/LICENSE)
 
