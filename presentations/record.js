@@ -74,7 +74,7 @@ function stopRecordAudio() {
                     var response = JSON.parse(this.responseText);
                     console.log(response.type);
                     if (response.type == "bullet") {
-                        document.getElementById("para1").innerHTML = response.bullet[0];
+                        document.getElementById("para1").innerHTML = "<p class='white-text'>" + response.bullet + "</p>";
                     }
                     if (response.type == "image") {
                         $("#image1").append(`<img src="" alt="" class="responsive-img"/>`);
@@ -84,7 +84,7 @@ function stopRecordAudio() {
                             $("#graph1").append(`<img src="../assets/img/barChart.png" alt="" class="responsive-img"/>`);
                         }
                         if (response.type.plot == "line") {
-                            $("#graph1").append(`<img src="../assets/img/barChart.png" alt="" class="responsive-img"/>`);
+                            $("#graph1").append(`<img src="../assets/img/lineChart.png" alt="" class="responsive-img"/>`);
                         }
                         if (response.type.plot == "pie") {
                             $("#graph1").append(`<img src="../assets/img/pieChart.png" alt="" class="responsive-img"/>`);
@@ -111,13 +111,21 @@ function stopRecordAudio() {
                     var response = JSON.parse(this.responseText);
                     console.log(response.type);
                     if (response.type == "bullet") {
-                        document.getElementById("para2").innerHTML = response;
+                        document.getElementById("para2").innerHTML = "<p class='white-text'>" + response.bullet + "</p>";
                     }
                     if (response.type == "image") {
-                        document.getElementById("image2").innerHTML = response;
+                        $("#image1").append(`<img src="" alt="" class="responsive-img"/>`);
                     }
                     if (response.type == "plot") {
-                        document.getElementById("graph2").innerHTML = response;
+                        if (response.type.plot == "bar") {
+                            $("#graph1").append(`<img src="../assets/img/barChart.png" alt="" class="responsive-img"/>`);
+                        }
+                        if (response.type.plot == "line") {
+                            $("#graph1").append(`<img src="../assets/img/lineChart.png" alt="" class="responsive-img"/>`);
+                        }
+                        if (response.type.plot == "pie") {
+                            $("#graph1").append(`<img src="../assets/img/pieChart.png" alt="" class="responsive-img"/>`);
+                        }
                     }
                 }
             };
@@ -132,5 +140,3 @@ function stopRecordAudio() {
 function downloadPresentation() {
     print();
 }
-
-// bar, pie, line
