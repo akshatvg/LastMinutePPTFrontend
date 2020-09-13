@@ -85,10 +85,9 @@ function stopRecordAudio() {
                         xhr2.onload = function () {
                             if (this.status == 200) {
                                 var response = JSON.parse(this.responseText);
-                                console.log(response);
-                                document.getElementById("title").innerHTML = response.title;
-                                var imageURL = this.responseText.url;
-                                $("#image1").append(`<img src="${imageURL}" alt="" class="responsive-img"/>`);
+                                console.log(response.photos[0].url);
+                                var imageURL = response.photos[0].url;
+                                $("#image1").append(`<img src="https://www.pexels.com/photo/two-yellow-labrador-retriever-puppies-1108099/" alt="" class="responsive-img"/>`);
                             }
                         };
                     }
@@ -142,8 +141,7 @@ function stopRecordAudio() {
                             if (this.status == 200) {
                                 var response = JSON.parse(this.responseText);
                                 console.log(response);
-                                document.getElementById("title").innerHTML = response.title;
-                                var imageURL = this.responseText.url;
+                                var imageURL = response.photos[0].url;
                                 $("#image2").append(`<img src="${imageURL}" alt="" class="responsive-img"/>`);
                             }
                         };
