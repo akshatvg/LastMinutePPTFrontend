@@ -70,8 +70,9 @@ function stopRecordAudio() {
                 if (this.status == 200) {
                     var response = JSON.parse(this.responseText);
                     console.log(response.type);
-                    var midBullet = str.split("|");
-                    document.getElementById("demo").innerHTML = res;
+                    var firstBullet = response.bullet;
+                    var midBullet = firstBullet.split("|");
+                    var finalBullet = midBullet.join("<br>");
                     document.getElementById("para1").innerHTML = "<p class='white-text' style='text-transform: capitalize;'>" + finalBullet + "</p>";
                     if (response.type == "image") {
                         imageOf = response.image;
@@ -129,7 +130,10 @@ function stopRecordAudio() {
                 if (this.status == 200) {
                     var response = JSON.parse(this.responseText);
                     console.log(response.type);
-                    document.getElementById("para2").innerHTML = "<p class='white-text' style='text-transform: capitalize;'>" + response.bullet + "</p>";
+                    var firstBullet = response.bullet;
+                    var midBullet = firstBullet.split("|");
+                    var finalBullet = midBullet.join("<br>");
+                    document.getElementById("para2").innerHTML = "<p class='white-text' style='text-transform: capitalize;'>" + finalBullet + "</p>";
                     if (response.type == "image") {
                         imageOf = response.image;
                         var xhr2 = new XMLHttpRequest();
